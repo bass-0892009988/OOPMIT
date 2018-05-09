@@ -13,15 +13,38 @@ public static final int MAX = 10;
         int myArray[] = new int[MAX];
         myArray = inputData(myArray);
         showData(myArray);
+        //find average
+        findAverage(myArray);
+        findMax(myArray);
 
 
 
     }  //main
 
+    private static void findMax(int[] myArray) {
+        int max = myArray[0];
+        for (int i = 0; i < myArray.length; i++) {
+            if (max<=myArray[i])
+                max = myArray[i];
+        }
+        System.out.println("The maximum value is "+max);
+    }
+
+    private static void findAverage(int[] myArray) {
+        int total = 0;
+        for (int val:myArray)
+            total += val;
+        System.out.println("The average value is "+(total/MAX));
+    }
+
+
+
+
     private static void showData(int[] myArray) {
         System.out.println("Data in array: ");
         for (int val:myArray)
             System.out.print(val+"\t");
+        System.out.println();
     }
 
     private static int[] inputData(int[] myArray) {
