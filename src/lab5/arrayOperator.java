@@ -16,10 +16,20 @@ public static final int MAX = 10;
         //find average
         findAverage(myArray);
         findMax(myArray);
+        findMin(myArray);
 
 
 
     }  //main
+
+    private static void findMin(int[] myArray) {
+        int min = myArray[0];
+        for (int i = 0; i < myArray.length; i++) {
+            if (min>=myArray[i])
+                min = myArray[i];
+        }
+        System.out.println("The minimum value is "+min);
+    }
 
     private static void findMax(int[] myArray) {
         int max = myArray[0];
