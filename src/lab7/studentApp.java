@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class studentApp {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         Student s1 = new Student();
         s1.setName("Mit");
         s1.setAge(22);
@@ -20,7 +20,7 @@ public class studentApp {
 
         //input data from user
         Student s3 = new Student();
-        s3 = inputData(s3); //s
+       // s3 = inputData(s3); //s
         s3 = inputDataBuffer(s3);
         System.out.println(s3.toString());
 
